@@ -1,0 +1,14 @@
+---
+# tasks file for roles/createuser
+
+- name: Including config.yml
+  include_vars:
+    file: ../files/config.yml
+
+- name: Create user
+  user:
+    name: japaras
+    comment: Jan Angelo Paras
+    shell: /bin/bash
+    
+

@@ -1,0 +1,14 @@
+---
+# tasks file for roles/changeMOTD
+
+- name: Change MOTD
+  copy:
+    content: "Unauthorized Access is Prohibited"
+    dest: "/etc/motd"
+
+- name: Disable Default MOTD
+  file:
+    dest: "/etc/update-motd.d/"
+    mode: 1666
+    state: directory
+    recurse: yes
