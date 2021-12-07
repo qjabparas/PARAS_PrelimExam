@@ -1,0 +1,8 @@
+---
+- name: Prelims Playbook
+  hosts: ubuntu
+  roles:
+    - python
+    - java
+    - changeMOTD
+    - createuser
